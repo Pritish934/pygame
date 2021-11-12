@@ -9,7 +9,7 @@ import random
 
 # initialize the constructor
 pygame.init()
-res = (720, 720)
+res = (700, 600)
 
 # randomly assigns a value to variables
 # ranging from lower limit to upper
@@ -22,7 +22,7 @@ clock = pygame.time.Clock()
 red = (255, 0, 0)
 green = (0, 255, 0)
 blue = (0, 0, 255)
-color_list = [red, green, blue]
+color_list = [red,green, blue]
 colox_c1 = 0
 colox_c2 = 0
 colox_c3 = 254
@@ -30,7 +30,7 @@ colox_c4 = 254
 
 # randomly assigns a colour from color_list
 # to player
-player_c = random.choice(color_list)
+player_c = blue
 
 # light shade of menu buttons
 startl = (169, 169, 169)
@@ -250,8 +250,8 @@ def game(
 
 		pygame.draw.rect(screen, blue, [e1_p[0], e1_p[1], enemy_size,
 						enemy_size])
-		score1 = smallfont.render('Score:', True, white)
-		screen.blit(score1, (width - 120, height - 40))
+		score1 = smallfont.render(f'Score:{count}', True, white)
+		screen.blit(score1 , (width - 120, height - 40))
 		screen.blit(exit2, (width - 80, 0))
 		pygame.display.update()
 
@@ -316,7 +316,7 @@ def intro(
 		pygame.draw.rect(screen, (c2, colox_c1, colox_c2), [width - 40,
 						0, 40, height])
 		smallfont = pygame.font.SysFont('Corbel', 35)
-		sig = smallfont.render('Designed by :- Antriksh', True, white)
+		sig = smallfont.render('Designed by :python.math', True, white)
 		text = smallfont.render('Start', True, white)
 		text1 = smallfont.render('Options', True, white)
 		exit1 = smallfont.render('Exit', True, white)
